@@ -9,6 +9,13 @@
 #define PRESCALER 64
 #define ACHTEL 100
 
+#define TUNE_C 264
+#define TUNE_D 297
+#define TUNE_E 330
+#define TUNE_F 352
+#define TUNE_G 396
+#define TUNE_A 440
+
 void ton(uint16_t freq) {
 
 	if (freq == 0){
@@ -33,9 +40,113 @@ int main(void) {
     TCCR0B = TCCR0B | 0b00000011;
     TCCR0B = TCCR0B & 0b11110011;
 
-    ton(264);
-    _delay_ms(100000);
+    ton(TUNE_C);
+    _delay_ms(ACHTEL);
     ton(0);
-
+    _delay_ms(ACHTEL);
+    ton(TUNE_D);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_E);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_F);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_G);
+    _delay_ms(2*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_G);
+    _delay_ms(2*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_G);
+    _delay_ms(4*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_A);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_G);
+    _delay_ms(4*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_F);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_F);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_F);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_F);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_E);
+    _delay_ms(2*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_E);
+    _delay_ms(2*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_D);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_D);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_D);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_G);
+    _delay_ms(ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
+    ton(TUNE_C);
+    _delay_ms(4*ACHTEL);
+    ton(0);
+    _delay_ms(ACHTEL);
     return 0;
 }
